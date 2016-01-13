@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+gcc file.c ../src/file.c
+./a.out
+rm a.out

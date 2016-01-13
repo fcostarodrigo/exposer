@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+echo "date test> Testing date."
+
+gcc date.c ../src/date.c -D DEBUG
+
+if [ $? -eq 0 ]
+then
+    ./a.out
+    if [ $? -eq 0 ]
+    then
+        echo "date test> Date working."
+    else
+        echo "date test> Date not working."
+    fi
+    rm a.out
+else
+    echo "browser test> Date does not compile."
+fi

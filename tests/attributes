@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+echo "attributes test> Testing attributes."
+
+gcc attributes.c ../src/attributes.c -D DEBUG
+
+if [ $? -eq 0 ]
+then
+    ./a.out
+    if [ $? -eq 0 ]
+    then
+        echo "attributes test> Attributes working."
+    else
+        echo "attributes test> Attributes not working."
+    fi
+    rm a.out
+else
+    echo "attributes test> Attributes does not compile."
+fi

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+echo "browser test> Testing browser."
+
+gcc browser.c ../src/browser.c -D DEBUG
+
+if [ $? -eq 0 ]
+then
+    ./a.out
+    if [ $? -eq 0 ]
+    then
+        echo "browser test> Browser working."
+    else
+        echo "browser test> Browser not working."
+    fi
+    rm a.out
+else
+    echo "browser test> Browser does not compile."
+fi

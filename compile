@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+gcc src/*.c -lm -O2 -o bin/exposer

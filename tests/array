@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+echo "array test> Testing array."
+
+gcc array.c ../src/array.c -D DEBUG
+
+if [ $? -eq 0 ]
+then
+    ./a.out
+    if [ $? -eq 0 ]
+    then
+        echo "array test> Array working."
+    else
+        echo "array test> Array not working."
+    fi
+    rm a.out
+else
+    echo "array test> Array does not compile."
+fi
